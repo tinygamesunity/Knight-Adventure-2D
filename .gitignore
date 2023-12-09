@@ -1,0 +1,107 @@
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+obj.meta
+Obj/
+#bin.meta # UnityPurchasing contains the Bin folder, wtf?
+#Bin/ # UnityPurchasing contains the Bin folder, wtf?
+UnityGenerated/
+/Library/
+.gradle/
+ 
+# ============================================= #
+# Visual Studio / MonoDevelop generated / Rider #
+# ============================================= #
+ExportedObj/
+.idea/
+*.svd
+*.userprefs
+/*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+.vscode/
+ 
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# dvscode
+release-ios/
+release-android/
+builds/
+#Screenshot*
+
+# Builds
+Build/
+macos/
+win64/
+/android
+/ios
+
+# Visual studio
+.vs
+*.VC.opendb
+*.sdf
+*.csproj.meta
+
+#EnvisionVR
+/Assets/Frameworks/NetClient/ClientLib.csproj.user.meta
+/Assets/Frameworks/CompiledNetClientModels~
+/EnvisionVR/*.csproj
+/EnvisionVR/EnvisionVR.Editor.csproj
+/EnvisionVR/EnvisionVR.csproj
+/EnvisionVR/EnvisionVR.Editor.csproj
+/EnvisionVR/EnvisionVR.csproj
+
+Assets/Plugins/Editor/JetBrains/
+Assets/Plugins/Editor/JetBrains/*
+Assets/Plugins/Editor/JetBrains.meta
+Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll
+Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta
+
+# DebugSettings
+DebugSettings.asset*
+Assets/StreamingAssets/build_info.meta
+Assets/StreamingAssets/build_info
+/Logs
+
+com.kyrylokuzyk.arfoundationremote
+ARFoundationRemoteInstaller/Assets/_TerrainAutoUpgrade.meta
+/Assets/_TerrainAutoUpgrade
+/Assets/_TerrainAutoUpgrade.meta
+/Assets/Plugins/Ludiq/Bolt.Flow/Generated/UnitOptions.db.meta
+
+# Never ignore DLLs in the FMOD subfolder.
+!/[Aa]ssets/Plugins/FMOD/**/lib/*
+
+# Don't ignore images and gizmos used by FMOD in the Unity Editor.
+!/[Aa]ssets/Gizmos/FMOD/*
+!/[Aa]ssets/Editor Default Resources/FMOD/*
+                    
+# Ignore the Cache folder since it is updated locally.
+/[Aa]ssets/Plugins/FMOD/Cache/*
+                    
+# Ignore bank files in the StreamingAssets folder.
+/[Aa]ssets/StreamingAssets/**/*.bank
+/[Aa]ssets/StreamingAssets/**/*.bank.meta
+                    
+# If the source bank files are kept outside of the StreamingAssets folder then these can be ignored.
+# Log files can be ignored.
+fmod_editor.log
+Assets/Plugins/ARFoundationRemoteInstaller
+Packages/com.unity.xr.arfoundation*
+UserSettings/
+buildReport.txt
+summary.json

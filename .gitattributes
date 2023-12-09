@@ -1,0 +1,54 @@
+## Unity ##
+*.cs diff=csharp text
+*.cginc text
+*.shader text
+* -text
+*.mat merge=unityyamlmerge eol=lf
+*.anim merge=unityyamlmerge eol=lf
+*.unity merge=unityyamlmerge eol=lf
+*.prefab merge=unityyamlmerge eol=lf
+*.physicMaterial2D merge=unityyamlmerge eol=lf
+*.physicMaterial merge=unityyamlmerge eol=lf
+*.asset merge=unityyamlmerge
+*.meta merge=unityyamlmerge eol=lf
+*.controller merge=unityyamlmerge eol=lf
+## git-lfs ##
+#Image
+*.jpg filter=lfs diff=lfs merge=lfs binary
+*.jpeg filter=lfs diff=lfs merge=lfs binary
+*.png filter=lfs diff=lfs merge=lfs binary
+*.gif filter=lfs diff=lfs merge=lfs binary
+*.psd filter=lfs diff=lfs merge=lfs binary
+*.ai filter=lfs diff=lfs merge=lfs binary
+*.tif filter=lfs diff=lfs merge=lfs binary
+#Audio
+*.mp3 filter=lfs diff=lfs merge=lfs binary
+*.wav filter=lfs diff=lfs merge=lfs binary
+*.ogg filter=lfs diff=lfs merge=lfs binary
+#Video
+*.mp4 filter=lfs diff=lfs merge=lfs binary
+*.mov filter=lfs diff=lfs merge=lfs binary
+#3D Object
+*.FBX filter=lfs diff=lfs merge=lfs binary
+*.fbx filter=lfs diff=lfs merge=lfs binary
+*.blend filter=lfs diff=lfs merge=lfs binary
+*.obj filter=lfs diff=lfs merge=lfs binary
+#ETC
+*.a filter=lfs diff=lfs merge=lfs binary
+*.exr filter=lfs diff=lfs merge=lfs binary
+*.tga filter=lfs diff=lfs merge=lfs binary
+*.pdf filter=lfs diff=lfs merge=lfs binary
+*.zip filter=lfs diff=lfs merge=lfs binary
+*.dll filter=lfs diff=lfs merge=lfs binary
+*.unitypackage filter=lfs diff=lfs merge=lfs binary
+*.aif filter=lfs diff=lfs merge=lfs binary
+*.ttf filter=lfs diff=lfs merge=lfs binary
+*.cubemap filter=lfs diff=lfs merge=lfs binary
+*.rns filter=lfs diff=lfs merge=lfs binary
+*.reason filter=lfs diff=lfs merge=lfs binary
+*.lxo filter=lfs diff=lfs merge=lfs binary
+*.bank filter=lfs diff=lfs merge=lfs binary
+#OpenCV
+Assets/OpenCVForUnity/Extra/exclude_contrib/iOS/opencv2.framework/opencv2 filter=lfs diff=lfs merge=lfs binary
+Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/opencv2 filter=lfs diff=lfs merge=lfs binary
+*.dat filter=lfs diff=lfs merge=lfs binary
