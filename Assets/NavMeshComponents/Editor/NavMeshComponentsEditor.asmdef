@@ -1,0 +1,16 @@
+{
+    "name": "NavMeshPlusEditor",
+    "references": [
+        "NavMeshPlus"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

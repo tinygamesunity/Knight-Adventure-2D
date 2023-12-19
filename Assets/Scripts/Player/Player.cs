@@ -26,7 +26,6 @@ public class Player : MonoBehaviour {
 
     private void HandleMovement() {
         Vector2 inputVector = GameInput.Instance.GetMovementVector();
-        inputVector = inputVector.normalized;
         rb.MovePosition(rb.position + inputVector * (movingSpeed * Time.fixedDeltaTime));
 
         if (Mathf.Abs(inputVector.x) > minMovingSpeed || Mathf.Abs(inputVector.y) > minMovingSpeed) {
