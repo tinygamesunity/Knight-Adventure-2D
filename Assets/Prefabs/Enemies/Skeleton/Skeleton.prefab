@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6597345270383574832}
   - component: {fileID: 2031154124142805608}
   m_Layer: 0
-  m_Name: SlimeVisual
+  m_Name: SkeletonVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 809108140, guid: ad27254d7fc57d64baaa7ddb44974bb6, type: 3}
+  m_Sprite: {fileID: -198461188, guid: 38beedf31df3b0d4a917b3d5db6c77ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &2031154124142805608
 Animator:
   serializedVersion: 5
@@ -117,11 +117,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7313183986014463985}
   - component: {fileID: 2983668216312155812}
-  - component: {fileID: 5237015361387754354}
+  - component: {fileID: 5139134065759834065}
   - component: {fileID: 231094404833505295}
   - component: {fileID: 6657620436686767434}
   m_Layer: 0
-  m_Name: Slime
+  m_Name: Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,8 +170,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!70 &5237015361387754354
-CapsuleCollider2D:
+--- !u!61 &5139134065759834065
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -202,9 +202,19 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0027479474, y: -0.049917497}
-  m_Size: {x: 0.90291417, y: 0.6437084}
-  m_Direction: 1
+  m_Offset: {x: 0.20769191, y: 1.2385712}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.105876, y: 2.5712185}
+  m_EdgeRadius: 0
 --- !u!195 &231094404833505295
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -254,7 +264,7 @@ GameObject:
   - component: {fileID: 3036193829561170232}
   - component: {fileID: 7039274518026815646}
   m_Layer: 0
-  m_Name: SlimeShadow
+  m_Name: SkeletonShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,8 +279,8 @@ Transform:
   m_GameObject: {fileID: 5284416448378180106}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.12, y: 0.05, z: 0}
+  m_LocalScale: {x: 1.5375, y: 0.9875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6864725938037086769}
