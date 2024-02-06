@@ -333,17 +333,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 231094404833505295, guid: 5c32504a475878d4abb1b10893fadeb3, type: 3}
+      propertyPath: m_Speed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2482217263236639962, guid: 5c32504a475878d4abb1b10893fadeb3, type: 3}
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
     - target: {fileID: 7313183986014463985, guid: 5c32504a475878d4abb1b10893fadeb3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.61
+      value: 2.46
       objectReference: {fileID: 0}
     - target: {fileID: 7313183986014463985, guid: 5c32504a475878d4abb1b10893fadeb3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.34
+      value: -0.62
       objectReference: {fileID: 0}
     - target: {fileID: 7313183986014463985, guid: 5c32504a475878d4abb1b10893fadeb3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1619,126 +1623,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5faf713177ff5e74f97912011221d11d, type: 3}
---- !u!1 &1811984487
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1811984488}
-  - component: {fileID: 1811984491}
-  - component: {fileID: 1811984490}
-  - component: {fileID: 1811984489}
-  m_Layer: 0
-  m_Name: SwordSlashVisual
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1811984488
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811984487}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0, z: -0.9848078, w: -0.17364807}
-  m_LocalPosition: {x: -0.7, y: -0.13, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 490532995}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -200}
---- !u!114 &1811984489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811984487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b8ea4e21812d734bb1fb9b727f66e2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sword: {fileID: 490532996}
---- !u!95 &1811984490
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811984487}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4899cc927f8cd854aa53f73c0e9851f0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!212 &1811984491
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811984487}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 4, y: 4}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!4 &1865202417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7589360273096369962, guid: 25b47a4677782e44eb9ace007bcaad4d, type: 3}
@@ -1935,8 +1819,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2012762601}
   - component: {fileID: 2012762602}
-  - component: {fileID: 2012762603}
   - component: {fileID: 2012762604}
+  - component: {fileID: 2012762603}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1953,7 +1837,7 @@ Transform:
   m_GameObject: {fileID: 2012762598}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.27, y: 0.3, z: 0}
+  m_LocalPosition: {x: -0.49, y: 0.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2256,24 +2140,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -160
       objectReference: {fileID: 0}
-    - target: {fileID: 7384485460618106000, guid: d79faf00a7c911a4c91cbc3018274208, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: b1efedfd5d5f9ab43af2aa88cc24a3b0, type: 2}
     - target: {fileID: 8028729842852846351, guid: d79faf00a7c911a4c91cbc3018274208, type: 3}
       propertyPath: m_Name
       value: Sword
       objectReference: {fileID: 0}
-    - target: {fileID: 8527818546780856927, guid: d79faf00a7c911a4c91cbc3018274208, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 109401214214357654, guid: d79faf00a7c911a4c91cbc3018274208, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1811984488}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d79faf00a7c911a4c91cbc3018274208, type: 3}
 --- !u!1660057539 &9223372036854775807
