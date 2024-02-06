@@ -1,3 +1,3 @@
 # Knight-Adventure-2D
-![image](https://github.com/tinygamesunity/Knight-Adventure-2D/assets/153363846/412aff73-dd28-4894-bed7-27b6c54e9b63)
+![Thumbnail2](https://github.com/tinygamesunity/Knight-Adventure-2D/assets/153363846/f3a99d92-a6b9-4993-9905-33785b23bd93)
 
