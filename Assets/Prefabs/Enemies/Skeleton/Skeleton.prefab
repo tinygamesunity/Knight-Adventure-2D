@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6864725938037086769}
   - component: {fileID: 6597345270383574832}
   - component: {fileID: 2031154124142805608}
+  - component: {fileID: 719408764774618289}
   m_Layer: 0
   m_Name: SkeletonVisual
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -198461188, guid: 38beedf31df3b0d4a917b3d5db6c77ee, type: 3}
+  m_Sprite: {fileID: -942333984, guid: 86a45985ef35203468e4cb23608a2c62, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -107,6 +108,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &719408764774618289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2434869970547727998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df892334777c6243837415a14d501a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2482217263236639962
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +239,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.6
-  m_Speed: 1.5
+  m_Speed: 0
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -250,10 +263,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb8c8f3e573e54e4c9928d37ad942dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingState: 1
-  roamingDistanceMax: 7
-  roamimgDistanceMin: 3
-  roamimgTimerMax: 2
+  _startingState: 0
+  _roamingDistanceMax: 7
+  _roamimgDistanceMin: 3
+  _roamimgTimerMax: 2
+  _isChasingEnemy: 0
+  _isAttackingEnemy: 0
 --- !u!114 &7802497732338339623
 MonoBehaviour:
   m_ObjectHideFlags: 0
