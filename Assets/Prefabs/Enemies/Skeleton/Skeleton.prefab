@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -942333984, guid: 86a45985ef35203468e4cb23608a2c62, type: 3}
+  m_Sprite: {fileID: -745515404, guid: a5cb17ace267c154caee712621ab9df8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,6 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df892334777c6243837415a14d501a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyAI: {fileID: 6657620436686767434}
+  _enemyEntity: {fileID: 7802497732338339623}
 --- !u!1 &2482217263236639962
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +134,7 @@ GameObject:
   - component: {fileID: 2983668216312155812}
   - component: {fileID: 5139134065759834065}
   - component: {fileID: 231094404833505295}
+  - component: {fileID: -4388881952584590975}
   - component: {fileID: 6657620436686767434}
   - component: {fileID: 7802497732338339623}
   m_Layer: 0
@@ -251,6 +254,61 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!60 &-4388881952584590975
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2482217263236639962}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.2581882, y: 2.6417825}
+      - {x: 1.5458169, y: 2.504851}
+      - {x: 0.6373093, y: 1.2327623}
+      - {x: -0.015087247, y: 0.98414254}
+      - {x: 0.37887174, y: 0.6486403}
+      - {x: 1.692536, y: 0.4645152}
+      - {x: 3.1743271, y: 0.72504747}
+      - {x: 3.6783133, y: 1.3010955}
+      - {x: 3.5365655, y: 2.1368074}
+      - {x: 2.623526, y: 2.5645502}
+  m_UseDelaunayMesh: 0
 --- !u!114 &6657620436686767434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,8 +325,12 @@ MonoBehaviour:
   _roamingDistanceMax: 7
   _roamimgDistanceMin: 3
   _roamimgTimerMax: 2
-  _isChasingEnemy: 0
-  _isAttackingEnemy: 0
+  _isChasingEnemy: 1
+  _chasingDistance: 4
+  _chasingSpeedMultiplier: 2
+  _isAttackingEnemy: 1
+  _attackingDistance: 2
+  _attackRate: 1
 --- !u!114 &7802497732338339623
 MonoBehaviour:
   m_ObjectHideFlags: 0

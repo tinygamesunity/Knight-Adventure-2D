@@ -164,8 +164,6 @@ public class EnemyAI : MonoBehaviour {
         _navMeshAgent.SetDestination(_roamPosition);
     }
 
-
-
     private Vector3 GetRoamingPosition() {
         return _startingPosition + Utils.GetRandomDir() * UnityEngine.Random.Range(_roamimgDistanceMin, _roamingDistanceMax);
     }
