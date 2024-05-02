@@ -345,6 +345,10 @@ PrefabInstance:
       propertyPath: _enemyAI
       value: 
       objectReference: {fileID: 515839900}
+    - target: {fileID: 719408764774618289, guid: 5c32504a475878d4abb1b10893fadeb3, type: 3}
+      propertyPath: _enemyShadow
+      value: 
+      objectReference: {fileID: 1189353722}
     - target: {fileID: 2482217263236639962, guid: 5c32504a475878d4abb1b10893fadeb3, type: 3}
       propertyPath: m_Name
       value: Skeleton
@@ -387,11 +391,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7313183986014463985, guid: 5c32504a475878d4abb1b10893fadeb3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.22
+      value: -6.95
       objectReference: {fileID: 0}
     - target: {fileID: 7313183986014463985, guid: 5c32504a475878d4abb1b10893fadeb3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.98
+      value: -2.48
       objectReference: {fileID: 0}
     - target: {fileID: 7313183986014463985, guid: 5c32504a475878d4abb1b10893fadeb3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -424,6 +428,14 @@ PrefabInstance:
     - target: {fileID: 7313183986014463985, guid: 5c32504a475878d4abb1b10893fadeb3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802497732338339623, guid: 5c32504a475878d4abb1b10893fadeb3, type: 3}
+      propertyPath: _enemySO
+      value: 
+      objectReference: {fileID: 11400000, guid: 0320e4f68827ee54594c5fe66d69fa72, type: 2}
+    - target: {fileID: 7802497732338339623, guid: 5c32504a475878d4abb1b10893fadeb3, type: 3}
+      propertyPath: _maxHealth
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1077,6 +1089,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1897825246}
   m_SourcePrefab: {fileID: 100100000, guid: 5faf713177ff5e74f97912011221d11d, type: 3}
+--- !u!1 &1189353722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5284416448378180106, guid: 5c32504a475878d4abb1b10893fadeb3, type: 3}
+  m_PrefabInstance: {fileID: 515839899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1289860533 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9089699569196242851, guid: 5faf713177ff5e74f97912011221d11d, type: 3}
@@ -1827,7 +1844,7 @@ Transform:
   m_GameObject: {fileID: 2012762598}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.53, y: -2.73, z: 0}
+  m_LocalPosition: {x: -0.78, y: -2.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2279,6 +2296,10 @@ PrefabInstance:
     - target: {fileID: 109401214214357654, guid: d79faf00a7c911a4c91cbc3018274208, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -160
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377383057761690376, guid: d79faf00a7c911a4c91cbc3018274208, type: 3}
+      propertyPath: _damageAmount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8028729842852846351, guid: d79faf00a7c911a4c91cbc3018274208, type: 3}
       propertyPath: m_Name
