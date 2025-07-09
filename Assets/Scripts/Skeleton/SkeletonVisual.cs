@@ -31,6 +31,8 @@ public class SkeletonVisual : MonoBehaviour
         _enemyEntity.OnDeath += _enemyEntity_OnDeath;
     }
 
+
+
     private void _enemyEntity_OnDeath(object sender, System.EventArgs e)
     {
         _animator.SetBool(IS_DIE, true);
@@ -41,11 +43,6 @@ public class SkeletonVisual : MonoBehaviour
     private void _enemyEntity_OnTakeHit(object sender, System.EventArgs e)
     {
         _animator.SetTrigger(TAKEHIT);
-    }
-
-    private void OnDestroy()
-    {
-        _enemyAI.OnEnemyAttack -= _enemyAI_OnEnemyAttack;
     }
 
     private void Update()
@@ -67,6 +64,12 @@ public class SkeletonVisual : MonoBehaviour
     private void _enemyAI_OnEnemyAttack(object sender, System.EventArgs e)
     {
         _animator.SetTrigger(ATTACK);
+    }
+    private void OnDestroy()
+    {
+        _enemyAI.OnEnemyAttack -= _enemyAI_OnEnemyAttack;
+        _enemyEntity.OnTakeHit -= _enemyEntity_OnTakeHit;
+        _enemyEntity.OnDeath -= _enemyEntity_OnDeath;
     }
 
 }

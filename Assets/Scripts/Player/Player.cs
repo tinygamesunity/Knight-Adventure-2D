@@ -40,6 +40,8 @@ public class Player : MonoBehaviour
         GameInput.Instance.OnPlayerAttack += GameInput_OnPlayerAttack;
     }
 
+    
+
 
     private void Update()
     {
@@ -121,6 +123,11 @@ public class Player : MonoBehaviour
     {
         Vector3 playerScreenPosition = Camera.main.WorldToScreenPoint(transform.position);
         return playerScreenPosition;
+    }
+
+    private void OnDestroy()
+    {
+        GameInput.Instance.OnPlayerAttack -= GameInput_OnPlayerAttack;
     }
 
 }

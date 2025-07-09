@@ -34,8 +34,6 @@ public class PlayerVisual : MonoBehaviour
         if (Player.Instance.IsAlive())
             AdjustPlayerFacingDirection();
     }
-
-
     private void AdjustPlayerFacingDirection()
     {
         Vector3 mousePos = GameInput.Instance.GetMousePosition();
@@ -48,5 +46,9 @@ public class PlayerVisual : MonoBehaviour
         {
             _spriteRenderer.flipX = false;
         }
+    }
+    private void OnDestroy()
+    {
+        Player.Instance.OnPlayerDeath -= Player_OnPlayerDeath;
     }
 }

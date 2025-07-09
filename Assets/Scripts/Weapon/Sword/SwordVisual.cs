@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
-public class SwordVisual : MonoBehaviour {
+
+public class SwordVisual : MonoBehaviour
+{
 
     [SerializeField] private Sword sword;
 
@@ -11,20 +10,28 @@ public class SwordVisual : MonoBehaviour {
     private const string ATTACK = "Attack";
 
 
-    private void Awake() {
+    private void Awake()
+    {
         animator = GetComponent<Animator>();
     }
 
-    private void Start() {
+    private void Start()
+    {
         sword.OnSwordSwing += Sword_OnSwordSwing;
     }
 
-    private void Sword_OnSwordSwing(object sender, System.EventArgs e) {
+    private void Sword_OnSwordSwing(object sender, System.EventArgs e)
+    {
         animator.SetTrigger(ATTACK);
     }
 
-    public void TriggerEndAttackAnimation() {
+    public void TriggerEndAttackAnimation()
+    {
         sword.AttackColliderTurnOff();
+    }
+    private void OnDestroy()
+    {
+        sword.OnSwordSwing -= Sword_OnSwordSwing;
     }
 
 }
