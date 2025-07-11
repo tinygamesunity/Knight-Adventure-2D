@@ -3,28 +3,28 @@ using UnityEngine;
 public class FlashBlink : MonoBehaviour
 {
 
-    [SerializeField] private MonoBehaviour _damagableObject;
-    [SerializeField] private Material _blinkMaterial;
-    [SerializeField] private float _blinkDuration = 0.2f;
+    [SerializeField] private MonoBehaviour damagableObject;
+    [SerializeField] private Material blinkMaterial;
+    [SerializeField] private float blinkDuration = 0.2f;
 
-    private float blinkTimer;
-    private Material defaultMaterial;
-    private SpriteRenderer spriteRenderer;
-    private bool isBlinking;
+    private float _blinkTimer;
+    private Material _defaultMaterial;
+    private SpriteRenderer _spriteRenderer;
+    private bool _isBlinking;
 
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        defaultMaterial = spriteRenderer.material;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _defaultMaterial = _spriteRenderer.material;
 
-        isBlinking = true;
+        _isBlinking = true;
     }
 
     private void Start()
     {
-        if (_damagableObject is Player)
+        if (damagableObject is Player player)
         {
-            (_damagableObject as Player).OnFlashBlink += DamagableObject_OnFlashBlink;
+            player.OnFlashBlink += DamagableObject_OnFlashBlink;
         }
     }
 
@@ -36,10 +36,10 @@ public class FlashBlink : MonoBehaviour
 
     private void Update()
     {
-        if (isBlinking)
+        if (_isBlinking)
         {
-            blinkTimer -= Time.deltaTime;
-            if (blinkTimer < 0)
+            _blinkTimer -= Time.deltaTime;
+            if (_blinkTimer < 0)
             {
                 SetDefaultMaterial();
             }
@@ -48,26 +48,26 @@ public class FlashBlink : MonoBehaviour
 
     private void SetBlinkingMaterial()
     {
-        blinkTimer = _blinkDuration;
-        spriteRenderer.material = _blinkMaterial;
+        _blinkTimer = blinkDuration;
+        _spriteRenderer.material = blinkMaterial;
     }
 
     private void SetDefaultMaterial()
     {
-        spriteRenderer.material = defaultMaterial;
+        _spriteRenderer.material = _defaultMaterial;
     }
 
     public void StopBlinking()
     {
         SetDefaultMaterial();
-        isBlinking = false;
+        _isBlinking = false;
     }
 
     private void OnDestroy()
     {
-        if (_damagableObject is Player)
+        if (damagableObject is Player player)
         {
-            (_damagableObject as Player).OnFlashBlink -= DamagableObject_OnFlashBlink;
+            player.OnFlashBlink -= DamagableObject_OnFlashBlink;
         }
     }
 

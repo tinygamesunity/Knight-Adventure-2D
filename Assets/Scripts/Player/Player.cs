@@ -9,43 +9,44 @@ public class Player : MonoBehaviour
     public event EventHandler OnPlayerDeath;
     public event EventHandler OnFlashBlink;
 
-    [SerializeField] private float _movingSpeed = 10f;
-    [SerializeField] private int _maxHealth = 10;
-    [SerializeField] private float _damageRecoveryTime = 0.5f;
+    [SerializeField] private float movingSpeed = 10f;
+    [SerializeField] private int maxHealth = 10;
+    [SerializeField] private float damageRecoveryTime = 0.5f;
 
-    Vector2 inputVector;
+    private Vector2 _inputVector;
 
     private Rigidbody2D _rb;
     private KnockBack _knockBack;
 
-    private float _minMovingSpeed = 0.1f;
+    private readonly float _minMovingSpeed = 0.1f;
     private bool _isRunning = false;
 
     private int _currentHealth;
     private bool _canTakeDamage;
     private bool _isAlive;
+    
+    private Camera _mainCamera;
 
     private void Awake()
     {
         Instance = this;
         _rb = GetComponent<Rigidbody2D>();
         _knockBack = GetComponent<KnockBack>();
+
+        _mainCamera = Camera.main;
     }
 
     private void Start()
     {
-        _currentHealth = _maxHealth;
+        _currentHealth = maxHealth;
         _canTakeDamage = true;
         _isAlive = true;
         GameInput.Instance.OnPlayerAttack += GameInput_OnPlayerAttack;
     }
-
     
-
-
     private void Update()
     {
-        inputVector = GameInput.Instance.GetMovementVector();
+        _inputVector = GameInput.Instance.GetMovementVector();
     }
 
 
@@ -93,7 +94,7 @@ public class Player : MonoBehaviour
 
     private IEnumerator DamageRecoveryRoutine()
     {
-        yield return new WaitForSeconds(_damageRecoveryTime);
+        yield return new WaitForSeconds(damageRecoveryTime);
         _canTakeDamage = true;
     }
 
@@ -109,8 +110,8 @@ public class Player : MonoBehaviour
 
     private void HandleMovement()
     {
-        _rb.MovePosition(_rb.position + inputVector * (_movingSpeed * Time.fixedDeltaTime));
-        if (Mathf.Abs(inputVector.x) > _minMovingSpeed || Mathf.Abs(inputVector.y) > _minMovingSpeed)
+        _rb.MovePosition(_rb.position + _inputVector * (movingSpeed * Time.fixedDeltaTime));
+        if (Mathf.Abs(_inputVector.x) > _minMovingSpeed || Mathf.Abs(_inputVector.y) > _minMovingSpeed)
         {
             _isRunning = true;
         } else
@@ -121,7 +122,7 @@ public class Player : MonoBehaviour
 
     public Vector3 GetPlayerScreenPosition()
     {
-        Vector3 playerScreenPosition = Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 playerScreenPosition = _mainCamera.WorldToScreenPoint(transform.position);
         return playerScreenPosition;
     }
 

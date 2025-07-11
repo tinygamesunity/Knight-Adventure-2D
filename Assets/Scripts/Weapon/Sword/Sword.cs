@@ -4,7 +4,7 @@ using UnityEngine;
 public class Sword : MonoBehaviour
 {
 
-    [SerializeField] private int _damageAmount = 2;
+    [SerializeField] private int damageAmount = 2;
 
     public event EventHandler OnSwordSwing;
 
@@ -30,7 +30,7 @@ public class Sword : MonoBehaviour
     {
         if (collision.transform.TryGetComponent(out EnemyEntity enemyEntity))
         {
-            enemyEntity.TakeDamage(_damageAmount);
+            enemyEntity.TakeDamage(damageAmount);
         }
     }
 

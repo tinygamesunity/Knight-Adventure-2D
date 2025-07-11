@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class PlayerVisual : MonoBehaviour
 {
+    private static readonly int Die = Animator.StringToHash(IsDie);
+    private static readonly int Running = Animator.StringToHash(IsRunning);
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
     private FlashBlink _flashBlink;
 
-    private const string IS_RUNNING = "IsRunning";
-    private const string IS_DIE = "IsDie";
+    private const string IsRunning = "IsRunning";
+    private const string IsDie = "IsDie";
 
     private void Awake()
     {
@@ -23,13 +25,13 @@ public class PlayerVisual : MonoBehaviour
 
     private void Player_OnPlayerDeath(object sender, System.EventArgs e)
     {
-        _animator.SetBool(IS_DIE, true);
+        _animator.SetBool(Die, true);
         _flashBlink.StopBlinking();
     }
 
     private void Update()
     {
-        _animator.SetBool(IS_RUNNING, Player.Instance.IsRunning());
+        _animator.SetBool(Running, Player.Instance.IsRunning());
 
         if (Player.Instance.IsAlive())
             AdjustPlayerFacingDirection();
@@ -39,13 +41,7 @@ public class PlayerVisual : MonoBehaviour
         Vector3 mousePos = GameInput.Instance.GetMousePosition();
         Vector3 playerPosition = Player.Instance.GetPlayerScreenPosition();
 
-        if (mousePos.x < playerPosition.x)
-        {
-            _spriteRenderer.flipX = true;
-        } else
-        {
-            _spriteRenderer.flipX = false;
-        }
+        _spriteRenderer.flipX = mousePos.x < playerPosition.x;
     }
     private void OnDestroy()
     {
