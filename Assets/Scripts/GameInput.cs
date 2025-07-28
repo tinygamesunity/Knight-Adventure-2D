@@ -9,6 +9,7 @@ public class GameInput : MonoBehaviour
     private PlayerInputActions _playerInputActions;
 
     public event EventHandler OnPlayerAttack;
+    public event EventHandler OnPlayerDash;
 
     private void Awake()
     {
@@ -18,6 +19,12 @@ public class GameInput : MonoBehaviour
         _playerInputActions.Enable();
 
         _playerInputActions.Combat.Attack.started += PlayerAttack_started;
+        _playerInputActions.Player.Dash.performed += PlayerDash_perfomed;
+    }
+
+    private void PlayerDash_perfomed(InputAction.CallbackContext obj)
+    {
+        OnPlayerDash?.Invoke(this, EventArgs.Empty);
     }
 
     public Vector2 GetMovementVector()
