@@ -1,40 +1,41 @@
 using System.Collections;
-using NUnit.Framework.Constraints;
 using UnityEngine;
 
-public class TransprencyDetection : MonoBehaviour
+public class TransparencyDetection : MonoBehaviour
 {
-
+    private const float FULL_NON_TRANSPARENT = 1.0f;
+    
     [Range(0f, 1f)]
     [SerializeField] private float transparencyAmount = 0.8f;
     [SerializeField] private float fadeTime = 0.5f;
 
     SpriteRenderer _spriteRenderer;
-
-    private float fullNonTransparencyValue = 1.0f;
-
+    
 
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.GetComponent<Player>())
+        if (collider.gameObject.GetComponent<Player>())
         {
-            if (collision is CapsuleCollider2D)
+            if (collider is CapsuleCollider2D)
+            {
                 StartCoroutine(FadeRoutine(_spriteRenderer, fadeTime, _spriteRenderer.color.a, transparencyAmount));
+            }
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collider)
     {
-        if (collision.gameObject.GetComponent<Player>())
+        if (collider.gameObject.GetComponent<Player>())
         {
-            if (collision is CapsuleCollider2D)
-                StartCoroutine(FadeRoutine(_spriteRenderer, fadeTime, _spriteRenderer.color.a, fullNonTransparencyValue));
+            if (collider is CapsuleCollider2D)
+            {
+                StartCoroutine(FadeRoutine(_spriteRenderer, fadeTime, _spriteRenderer.color.a, FULL_NON_TRANSPARENT));
+            }
         }
     }
 
@@ -52,7 +53,4 @@ public class TransprencyDetection : MonoBehaviour
             yield return null;
         }
     }
-    
-
-
 }

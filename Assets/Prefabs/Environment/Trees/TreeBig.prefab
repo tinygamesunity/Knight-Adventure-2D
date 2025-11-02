@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1351186356213714151}
   - component: {fileID: 8954197327956769810}
   - component: {fileID: -3848926641135008867}
-  - component: {fileID: 3625595316725247332}
-  - component: {fileID: 8211576646396032840}
+  - component: {fileID: 1591768534282697739}
+  - component: {fileID: 4472509845257645675}
   m_Layer: 0
   m_Name: TreeBig
   m_TagString: Untagged
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Center: {x: -0.010607719, y: 0.20963031, z: 0}
   m_Area: 1
   m_AffectedAgents: ffffffff
---- !u!70 &3625595316725247332
+--- !u!70 &1591768534282697739
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,10 +181,10 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.00000003803217, y: 1.6809635}
-  m_Size: {x: 3.0000014, y: 2.6049573}
+  m_Offset: {x: -0.005527055, y: 1.7068923}
+  m_Size: {x: 2.9277675, y: 2.4966576}
   m_Direction: 1
---- !u!114 &8211576646396032840
+--- !u!114 &4472509845257645675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,8 +193,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8369109743382935100}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e4c609a5412e814095a25e063449930, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b8149e2a581bd445a67719b1fb91d37, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TransprencyDetection
+  m_EditorClassIdentifier: Assembly-CSharp::TransparencyDetection
   transparencyAmount: 0.8
   fadeTime: 0.5
