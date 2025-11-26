@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1729792119820708463}
   - component: {fileID: 784452434106789317}
   m_Layer: 0
-  m_Name: StumpVisual
+  m_Name: StoneVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -18396394, guid: bc8c74d1359774f44875e590314540d9, type: 3}
+  m_Sprite: {fileID: -130373372, guid: bc8c74d1359774f44875e590314540d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destructiblePlant: {fileID: 7818166145947684080}
-  bushDeathVFXPrefab: {fileID: 908986388617465607, guid: d0b96536824d4e24faae6670d9956ef5, type: 3}
+  bushDeathVFXPrefab: {fileID: 4368956065437560835, guid: d89f0af23a2f8ae4c9d12e1fca98bbae, type: 3}
 --- !u!1 &9089699569196242851
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,10 +114,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6299999983588585594}
-  - component: {fileID: 4891419366674959103}
+  - component: {fileID: 2836771372388124793}
+  - component: {fileID: 24657566379568454}
   - component: {fileID: 7818166145947684080}
   m_Layer: 0
-  m_Name: Stump
+  m_Name: Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,7 +140,7 @@ Transform:
   - {fileID: 8724194932257120893}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &4891419366674959103
+--- !u!70 &2836771372388124793
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,9 +174,25 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.05556179, y: -0.011112327}
-  m_Size: {x: 1.3889873, y: 1.1000675}
+  m_Offset: {x: -0.023247615, y: -0.09575952}
+  m_Size: {x: 1.9646013, y: 1.6907837}
   m_Direction: 1
+--- !u!114 &24657566379568454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9089699569196242851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa0352a4d56abd42ad2fc69deb72448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Size: {x: 2.009461, y: 1.7453741, z: 4}
+  m_Center: {x: -0.02558583, y: -0.07574171, z: 0}
+  m_Area: 1
+  m_AffectedAgents: ffffffff
 --- !u!114 &7818166145947684080
 MonoBehaviour:
   m_ObjectHideFlags: 0

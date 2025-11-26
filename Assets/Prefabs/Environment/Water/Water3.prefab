@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6299999983588585594}
   - component: {fileID: 4126834498339895228}
   m_Layer: 0
-  m_Name: Flower 3
+  m_Name: Water3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,8 +78,8 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 729518876, guid: bc8c74d1359774f44875e590314540d9, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -1561699563, guid: bc8c74d1359774f44875e590314540d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
